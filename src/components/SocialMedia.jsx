@@ -7,14 +7,32 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <BsLinkedin />
+        <a
+          href="https://www.linkedin.com/in/basofi-ibnur-rohman-707417b1/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsLinkedin />
+        </a>
       </div>
       <div>
-        <BsInstagram />
+        <a
+          href="https://www.instagram.com/id.kyo/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsInstagram />
+        </a>
       </div>
-      <div>
-        <FaFacebookF />
-      </div>
+      {/* <div>
+        <a
+          href="https://www.facebook.com/ID.PsychoBoy"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaFacebookF />
+        </a>
+      </div> */}
     </div>
   );
 };
