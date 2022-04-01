@@ -21,7 +21,7 @@ const Skills = () => {
       setSkills(data);
     });
   }, []);
-
+  console.log(experience);
   return (
     <Fragment>
       <h2 className="head-text">Skills & Experience</h2>
@@ -47,17 +47,14 @@ const Skills = () => {
         </motion.div>
 
         <motion.div className="app__skills-exp">
-          {experience.map((experience) => (
-            <motion.div
-              className="app__skills-exp-item"
-              key={experience.year}
-            >
+          {experience.map((experience, i) => (
+            <motion.div className="app__skills-exp-item" key={i}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
-                  <Fragment key={work.name}>
+                  <Fragment key={`${work.name} - ${work.year}`}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}

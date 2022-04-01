@@ -43,22 +43,27 @@ const Work = () => {
   return (
     <Fragment>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> Section
+        My <span>Portfolio</span> Section
       </h2>
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? 'item-active' : ''
-              }`}
-            >
-              {item}
-            </div>
-          ),
-        )}
+        {[
+          'Firebase',
+          'Tailwind',
+          'Sanity',
+          'Next',
+          'React',
+          'All',
+        ].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? 'item-active' : ''
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       <motion.div
         animate={animateCard}
@@ -98,7 +103,7 @@ const Work = () => {
                   </motion.div>
                 </a>
                 <a
-                  href={work.projectLink}
+                  href={work.codeLink}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -135,6 +140,6 @@ const Work = () => {
 
 export default AppWrap(
   MotionWrap(Work, 'app__works'),
-  'work',
+  'portfolio',
   'app_primarybg',
 );
