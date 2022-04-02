@@ -47,12 +47,13 @@ const Work = () => {
       </h2>
       <div className="app__work-filter">
         {[
-          'Firebase',
-          'Tailwind',
-          'Sanity',
-          'Next',
-          'React',
           'All',
+          'React',
+          'Next',
+          'Tailwind',
+          'Firebase',
+          'Sanity',
+          'React Native',
         ].map((item, index) => (
           <div
             key={index}
